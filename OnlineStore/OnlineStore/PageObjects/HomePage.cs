@@ -17,6 +17,11 @@ namespace OnlineStore.PageObjects
         }
 
             [FindsBy(How = How.XPath, Using = "//*[@id=\"account\"]/a")][CacheLookup]
-            public IWebElement MyAccount { get; set; }
+            private IWebElement MyAccount { get; set; }
+
+        public void ClickOnMyAccount()
+        {
+            MyAccount.Click();
+        }
     }
 }

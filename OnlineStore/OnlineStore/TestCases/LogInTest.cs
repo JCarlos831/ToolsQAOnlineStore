@@ -19,15 +19,12 @@ namespace OnlineStore.TestCases
             Driver.driver.Navigate().GoToUrl("http://store.demoqa.com");
 
             var homePage = new HomePage();
-            homePage.MyAccount.Click();
+            homePage.ClickOnMyAccount();
 
             var loginPage = new LoginPage();
-            loginPage.UserName.SendKeys("testuser_jc");
-            loginPage.Password.SendKeys("Test@123");
-            loginPage.Submit.Submit();
+            loginPage.LoginToApplication();
 
-
-
+            Driver.driver.Close();
         }
     }
 }
